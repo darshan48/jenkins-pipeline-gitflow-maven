@@ -119,7 +119,7 @@ def get_branch_deployment_environment(String branch_type) {
 
 def mvn(String goals) {
 
-    def javaHome = tool "/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.171-8.b10.el7_5.x86_64"
+    def javaHome = tool "java-1.8.0-openjdk-1.8.0.171-8.b10.el7_5.x86_64"
 
     withEnv(["JAVA_HOME=${javaHome}"]) {
         sh "mvn -B ${goals}"
